@@ -27,20 +27,22 @@
 	</style>
 </head>
 <body>
-	<h1 class="center">ITMD-361 - Lab 7 - Basic JavaScript Event Handling and DOM</h1>
-	<h2 class="center">Nick Bledsoe</h2>
-	<h3 class="center">Nbledsoe@hawk.iit.edu</h3>
-	<div id="container">
-		<input id="entryinput" type="text" name="textentry" placeholder="Enter a Message">
-		<div id="entrybutton">Alert Me</div>
-		<h2 id="textoutput" class="center">Show results here</h2>
-	</div>
-	<script type="text/javascript">
-	  entrybutton.addEventListener("click", myFunction);
-
-function myFunction() {
-    document.getElementById("entrybutton").innerHTML = container ;
-}
-	</script>
+  <h1 class="center">ITMD-361 - Lab 7 - Basic JavaScript Event Handling and DOM</h1>
+  <h2 class="center">Nick Bledsoe</h2>
+  <h3 class="center">Nbledsoe@hawk.iit.edu</h3>
+  <div id="container">
+    <input id="entryinput" type="text" name="textentry" placeholder="Enter a Message">
+    <div id="entrybutton">Alert Me</div>
+    <h2 id="textoutput" class="center">Show results here</h2>
+  </div>
+    <script type="text/javascript">
+      var alt = document.getElementById("entrybutton");
+      alt.addEventListener("click", click);
+      function click(){
+        var input = document.getElementById("entryinput").value;
+        alert("Nick Bledsoe: " + input);
+	document.getElementById("textoutput").innerHTML = input;
+      }
+    </script>
 </body>
 </html>
